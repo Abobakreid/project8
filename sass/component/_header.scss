@@ -1,0 +1,219 @@
+$orang: #ff5f13;
+@each $social,
+$col in (twitter, #55acee),
+(facebook-f, #3b5999),
+(google-plus-g, #dd4b39),
+(linkedin-in, #0077b5) {
+    .fa-#{$social}:hover {
+        color: $col;
+    }
+}
+
+.navbar {
+    background-color: #00000099;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99999;
+    transition: all .6s ease-in-out;
+    .contact {
+        @media (max-width: 992px) {
+            display: none;
+        }
+        font-size: 14px;
+        color: white;
+        padding: 20px 0;
+        transition: all .6s ease-in-out;
+        .info ul li {
+            margin-right: 17px;
+        }
+        .social ul li a {
+            color: white;
+            i:hover {
+                transform: rotateY(360deg);
+                transition: all 0.8s ease-in-out;
+            }
+        }
+    }
+    .brand {
+        >i {
+            color: $orang;
+            line-height: 1.3;
+        }
+        >h3 {
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            >a {
+                display: inline-block;
+                font-size: 25px;
+                color: $orang;
+                font-weight: bolder;
+                font-family: "Caveat", cursive, sans-serif;
+            }
+        }
+    }
+    hr {
+        color: white;
+        margin: 0;
+    }
+    .nav {
+        padding: 20px 0;
+        .links {
+            >ul {
+                @media (max-width: 992px) {
+                    display: block;
+                }
+                height: 100%;
+                >li {
+                    >a {
+                        padding: 14px 10px;
+                        display: block;
+                        color: $orang;
+                        height: 100%;
+                        transition: all 0.5s ease;
+                        &:hover {
+                            color: white;
+                        }
+                        >i{
+                            display: none;
+                            @media (max-width: 992px) {
+                                display: inline-block;
+                            }
+                        }
+                    }
+                    &.blog {
+                        position: relative;
+                        &:hover {
+                            >ul {
+                                display: block;
+                                @media (max-width: 992px) {
+                                    display: none;                         
+                                 } 
+                            }                        
+                        }
+                        >ul {
+                            border-top: 5px solid $orang;
+                            background-color:rgb(250, 175, 77);
+                            padding: 10px 8px;
+                            position: absolute;
+                            left: 0;
+                            z-index: 99;
+                            width: 150px;
+                            display: none;
+                            >li {
+                                a {
+                                    display: block;
+                                    padding: 9px;
+                                    color: $orang;
+                                    transition: all 0.5s ease;
+                                    &:hover {
+                                        color:white;
+                                    }
+                                }                             
+                            }
+                            @media (max-width: 992px) {
+                                position: static; 
+                                width: 100%; 
+                                border-top: none;                                                             
+                            }                             
+                        }                        
+                    }
+                    &.pages {
+                        position: relative;
+                        &:hover {
+                            >ul {
+                                display: block;
+                                @media (max-width: 992px) {
+                                   display: none;                         
+                                }  
+                            }
+                        }
+                        >ul {
+                            border-top: 5px solid $orang;
+                            background-color: rgb(250, 175, 77);
+                            padding: 9px 8px;
+                            position: absolute;
+                            left: 0;
+                            width: 170px;
+                            display: none;
+                            >li {
+                                a {
+                                    display: block;
+                                    padding: 9px;
+                                    transition: all 0.5s ease;
+                                    color: $orang;
+                                    &:hover {
+                                        color: white;
+                                    }
+                                }
+                            }
+                            @media (max-width: 992px) {
+                                position: static;
+                                width: 100%;  
+                                border-top: none;                          
+                            }                              
+                        }                    
+                    }
+                }
+            }
+            @media (max-width: 992px) {
+                display: none;
+                position: fixed;
+                left: 15px;
+                top: 84px;
+                right: 15px;
+                background-color: rgb(250, 175, 77);
+            }            
+        }
+        .conc {
+            @media (max-width: 992px) {
+                display: none;
+            }
+            >a {
+                color: white;
+                display: block;
+                font-size: 18px;
+                background-color: $orang;
+                margin: 0;
+                padding: 15px 10px;
+                position: relative;
+                border-radius: 10px;
+                overflow: hidden;
+                &:hover span:first-of-type {
+                    width: 100%;
+                }
+                span:first-of-type {
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 0;
+                    height: 100%;
+                    z-index: 1;
+                    background-color: orange;
+                    transition: all 1s ease-in-out;
+                }
+                span:last-of-type {
+                    display: block;
+                    position: relative;
+                    left: 0;
+                    top: 0;
+                    z-index: 3;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+        .tabs {
+            @media (min-width: 992px) {
+                display: none;
+            }
+            i {
+                cursor: pointer;
+                color: white;
+                line-height: 2em;
+            }
+        }
+    }
+}

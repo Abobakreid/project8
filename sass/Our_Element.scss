@@ -1,0 +1,151 @@
+body {
+    font-family: "Caveat", cursive, sans-serif;
+    font-style: normal;
+}
+
+/* start the navbar*/
+@import 'component/header.scss';
+/* end the navbar*/
+
+// stat the background
+
+.background {
+    background: url("../images/15.jpg") no-repeat center center fixed;
+    height: 100vh;
+    background-size: cover;
+    .img {
+        background-color: rgba(0, 0, 0, 0.7);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        span {
+            display: inline-block;
+            height: 5px;
+            width: 40px;
+            background-color: $orang;
+        }
+        h2,
+        p {
+            margin: 0;
+        }
+        p {
+            display: inline-block;
+            color: $orang;
+            a{
+                color: $orang;
+                font-size: 20px;
+            }
+        }
+        h2 {
+            font-size: 110px;
+            color: $orang;
+            text-transform: uppercase;
+            @media (max-width: 551px) {
+                font-size: 40px;
+            }
+            @media (min-width: 552px)and (max-width: 1200px) {
+                font-size: 55px;
+            }            
+        }
+    }
+}
+
+// end the background
+/*/*start the Our Projects*/
+
+@each $i,$b,$c in 
+(def,#eee,rgb(30, 20, 66)),
+(pri,#1f2b7b,white),
+(suc,#4cd3e3,white),
+(inf,#38a4ff,white),
+(war,#f4e700,white),
+(dan,#f44a40,white),
+(lin,#eee,rgb(30, 20, 66)),
+(dis,#eee,rgb(30, 20, 66)){
+  .#{$i}{
+     background-color: $b;
+     color: $c;
+     border: 1px solid $b;
+     &:hover{
+         background-color: $c;
+         color: $b;
+     }
+  }
+}
+
+.Our_Element {
+    padding: 80px 0;
+    .element2{
+         padding: 20px 0;
+       .buttons{
+           button{
+               padding: 12px 18px;
+               margin-bottom: 20px;
+               cursor: pointer;
+           }
+           .lin{
+               text-decoration: underline;
+           }
+           .dis{
+               cursor: no-drop;
+           }       
+       }
+       &:nth-of-type(even){
+            button{
+                border-radius: 10px;
+            }
+       }
+    }
+    .left_align,.right_align{
+        img{
+            display: inline-block;
+            height: 100%;
+            width: 20%;
+            @media (max-width: 991px){
+                width: 100%;
+               }
+        }
+        div{
+            display: inline-block;
+            width: 79%;
+            @media (max-width: 991px){
+                width: 100%;
+               }
+            p{
+                margin: 0;
+                line-height: 1.4;
+            }
+        }
+    }
+    .definitions{
+        padding: 50px 0;
+        .definition{
+            width: 31%;
+            @media (max-width: 991px){
+             width: 100%;
+            }
+        }
+    }
+    .Block_Quotes{
+        padding: 20px;
+        q{
+            display: inline-block;
+            padding: 30px;
+            border-left: 2px solid #AAA;
+            background-color: #fbfbfb;
+        }
+    }
+}
+
+
+/*end the Our Projects*/
+/*start the footer*/
+
+@import 'component/footer.scss';
+/*end the footer*/
+
+/*start the to top*/
+
+@import 'component/toTop.scss';
+/*end the to top*/

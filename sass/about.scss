@@ -1,0 +1,308 @@
+body {
+    font-family: "Caveat", cursive, sans-serif;
+    font-style: normal;
+}
+/* start the navbar*/
+@import 'component/header.scss';
+/* end the navbar*/
+// stat the background
+
+.background {
+    background: url("../images/15.jpg") no-repeat center center fixed;
+    height: 100vh;
+    background-size: cover;
+    .img {
+        background-color: rgba(0, 0, 0, 0.7);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        span {
+            display: inline-block;
+            height: 5px;
+            width: 40px;
+            background-color: $orang;
+        }
+        h2,
+        p {
+            margin: 0;
+        }
+        p {
+            display: inline-block;
+            color: $orang;
+            a{
+                color: $orang;
+                font-size: 20px;
+            }
+        }
+        h2 {
+            font-size: 130px;
+            color: $orang;
+            text-transform: uppercase;
+            @media (max-width: 551px) {
+                font-size: 50px;
+            }
+            @media (min-width: 552px)and (max-width: 1200px) {
+                font-size: 70px;
+            }            
+        }
+    }
+}
+
+// end the background
+
+/*
+strat the Who we are
+*/
+
+.Who_we {
+    padding: 50px 0;
+    margin-top: 50px;
+    .text {
+        width: 40%;
+        margin-right: 6%;
+        padding-left: 100px;
+        h2 {
+            font-size: 50px;
+            text-transform: uppercase;
+        }
+        p:first-of-type {
+            font-weight: bolder;
+        }
+        .read{
+            color: white;
+            display: inline-block;
+            font-size: 18px;
+            background-color: $orang;
+            margin: 0;
+            padding: 15px 15px;
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            &:hover span:first-of-type {
+                width: 100%;
+            }
+            span:first-of-type {
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 0;
+                height: 100%;
+                z-index: 1;
+                background-color: orange;
+                transition: all 1s ease-in-out;
+            }
+            span:last-of-type {
+                display: block;
+                position: relative;
+                left: 0;
+                top: 0;
+                z-index: 3;
+                height: 100%;
+                width: 100%;
+            }            
+        }
+        @media (max-width: 1199px) {
+            float: none;
+            width: 100%;
+            margin-right: 0;
+            padding: 0 30px ;
+            margin-bottom: 30px;
+        }  
+        
+    }
+    .img{
+        overflow: hidden;
+        width: 54%;
+        @media (max-width: 1199px) {
+            float: none;
+            width: 100%;
+        }          
+        img{
+            width: 100%;
+        }     
+    }
+    @media (max-width: 551px) {
+       margin-top: 0;
+       padding: 0;
+    }       
+}
+
+
+/* 
+end the Who we are
+*/
+/*start the testimonial*/
+.testimonial{
+    padding: 50px 20px;
+    background-color: #00235b;
+    color: white;
+    h2:first-of-type{
+        position: absolute;
+        top: -60px;
+        left: 15px;
+        margin: 0;
+        font-size: 120px;
+        -webkit-text-stroke: 1px rgba(255,255,255,.2);
+        -webkit-text-fill-color: transparent;
+        @media (max-width: 551px) {
+            font-size: 50px;
+            top: -20px;
+        }
+        @media (min-width: 551px) and (max-width: 767px) {
+            font-size: 90px;
+        }                           
+    }
+    h2:last-of-type{
+        font-size: 70px;
+        font-weight: 700px;
+        @media (max-width: 551px) {
+            font-size: 40px;
+        }                
+    }
+    .testimonials{
+        position: relative;
+        overflow: hidden;
+        min-height: 360px;
+        .testi{
+            position: absolute;
+            left: -1800px;
+            width: 100%;
+            p{
+                color:#a4acc3 ;
+            }
+            .borderleft{
+                border-left: 2px solid $orang;
+                padding-left: 25px; 
+                span:last-of-type{
+                    color:#a4acc3;
+                }
+            } 
+        }
+        .active{
+           left:0;
+           width: 100%;
+        }
+        >span{
+            display: inline-block;
+            position: absolute;
+            bottom: 10px;
+            border-radius: 50%;
+            padding: 6px 5px;
+            cursor: pointer;
+            i{
+                display: block;
+            }                
+        }
+        .right{
+          right: 10px;
+          top: auto;
+          border: 1px solid white;
+          
+        }
+        .left{
+            right: 49px;
+            top: auto;
+            border: 1px solid #a4acc3;  
+            color: #a4acc3;               
+          }            
+    }
+    .container{
+        width: 70%;
+        @media (max-width: 551px) {
+            width: 90%;
+        }               
+    }
+}    
+
+/*end the testimonial*/
+/*
+start the Our team
+*/
+.Our_team {
+    padding: 50px 10px;
+    margin-top: 60px;
+    .h1 {
+        font-size: 50px;
+        margin-top: 90px;
+        text-transform: uppercase;
+        color: #0e132a;
+        @media (min-width: 552px)and (max-width: 991px) {
+            margin-top: 150px;
+        }           
+    }
+    .team {
+        padding-top: 40px;
+        width: 32%;
+        height: 100%;
+        >.scop {
+            overflow: hidden;
+            >img {
+                display: block;
+                width: 100%;
+                height: 410px;
+                transition: all .8s ease-in-out;
+            }
+        }
+        >a {
+            display: block;
+            padding: 5px 0;
+            color: black;
+            text-transform: capitalize;
+            i{
+                padding: 5px 3px;
+            }
+        }
+        >span{
+            display: block;
+            color: $orang;
+            padding: 10px 0;
+           >span:first-of-type{
+               display: inline-block;
+               height: 2px;
+               width: 5%;
+               background-color: $orang;
+           }   
+        }  
+        >h3{
+            color: #0e132a;
+            font-weight: 700;
+            font-size: 25px;
+        }             
+        &:hover {
+            img {
+                transform: scale(1.1);
+            }                               
+        } 
+        &.margin{
+            margin-left: 2%;
+            margin-right: 2%;
+            @media (max-width: 991px) {
+                margin-left: 0;
+                margin-right: 0;
+            }  
+        }  
+    
+        @media (max-width: 991px) {
+            float: none;
+            width: 100%;
+        }  
+               
+    }
+    @media (max-width: 552px){
+        margin-top: 40px;
+    }          
+}
+/*
+end the Our team
+*/
+/*start the footer*/
+
+@import 'component/footer.scss';
+/*end the footer*/
+
+/*start the to top*/
+
+@import 'component/toTop.scss';
+/*end the to top*/

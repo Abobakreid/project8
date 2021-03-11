@@ -1,0 +1,142 @@
+
+footer{
+    padding: 50px 0;
+    background-color: #070b11;;
+    color: white;
+    .foot{
+        padding: 50px 0;
+      >div{
+          width: 23%;
+          &.construction{
+            width: 28%;
+            color:  #9fa6bd;
+            i{
+                color: $orang;
+            }
+            h2{
+                display: inline-block;
+                a{
+                    color: white;
+                }
+            }
+            @media (max-width: 551px) {
+                    width: 100%;
+            }
+            @media (min-width: 552px)and(max-width: 991px) {
+                width: 50%;
+            }                        
+          }
+          &.quick-links{
+              padding: 0 25px;
+              ul li{
+                  padding: 10px 0;
+                  a{
+                   color: #868c98;
+                   transition: all .3s ease-out;
+                   &:hover{
+                       padding-left: 5px;
+                       color: $orang;
+                   }                   
+                  }
+              }
+              @media (max-width: 551px) {
+               padding-left: 0;
+               width: 100%;
+              }
+              @media (min-width: 552px)and(max-width: 991px) {
+                width: 50%;
+              }                        
+          }
+          &.Contact{
+              p{
+                color:  #9fa6bd;  
+              }
+          >span{
+              padding: 10px 0;
+              display: block;
+              a{
+                  color: #868c98;
+                  transition: all .3s ease-out;
+                &:hover{
+                    padding-left: 5px;
+                    color: $orang;
+                }
+              }
+          }
+          @media (max-width: 551px) {
+            width: 100%;
+           }
+           @media (min-width: 552px)and(max-width: 991px) {
+             width: 50%;
+           }          
+        }    
+        &.form{
+            form{
+                input{
+                    width: 60%;
+                    padding: 13px 15px;
+                    background-color: #1e293a;
+                    border: none;
+                    color: white;
+                    &::placeholder{
+                        color: white;
+                    }
+                }
+                button{
+                    width: 38%;
+                    padding: 15px 15px; 
+                    border: 1px solid #070b11; 
+                    background-color: #070b11;
+                    color: white; 
+                    position: relative;
+                    cursor: pointer;
+                    &:hover span:first-of-type {
+                        height: 100%;
+                        color: white;
+                    }
+                    span:first-of-type {
+                        display: block;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 0;
+                        z-index: 1;
+                        background-color: $orang;
+                        transition: all .4s ease-in-out;
+                    }
+                    span:last-of-type {
+                        display: block;
+                        position: relative;
+                        left: 0;
+                        top: 0;
+                        z-index: 3;
+                        height: 100%;
+                        width: 100%;
+                    }                     
+                }
+            }
+            >img{
+                width: 100%;
+            }
+            @media (max-width: 551px) {
+                width: 100%;
+               }
+               @media (min-width: 552px)and(max-width: 991px) {
+                 width: 50%;
+               }            
+        }            
+      }
+      @media (max-width: 551px) {
+        >div{
+            margin-top: 20px;
+        }
+      }     
+    }
+    .copyright{
+        padding: 20px 0;
+        p > a{
+            color: $orang;
+        }
+    }      
+}
